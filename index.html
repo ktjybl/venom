@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venom 2-Главная</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/normalize.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
 </head>
 <body class="blood">
     <div class="container">
@@ -16,12 +19,21 @@
           <img width="46" height="71" src="img/logo.png" class="logo-image" alt="logo">
        </a>
 <nav class="nav">
-   <ul class="nav-menu">
+   <button class="menu-button">
+         <span class="menu-button-text">меню</span>
+         <img src="img/menu.svg" class="menu-button-icon" alt="menu-icon">
+      </button>
+  <button class="menu-close">
+         <span class="menu-close-text">закрыть</span>
+         <img src="img/arrow.svg" class="menu-close-icon" alt="menu-icon">
+      </button>
+   <ul class="nav-menu"> 
       <li class="nav-menu__item">
           <a href="about.html" class="nav-menu__link">о фильме</a>
       </li>
       <li class="nav-menu__item">
-          <a href="trailer.html" class="nav-menu__link">трейлер</a>                            </li>
+          <a href="trailer.html" class="nav-menu__link">трейлер</a>        
+      </li>
       <li class="nav-menu__item">
           <a href="actors.html" class="nav-menu__link">актеры</a>
       </li>
@@ -31,21 +43,21 @@
    </ul>
 </nav>
 </header>
-<section class="hero">
-       <div class="hero-text">
-                    <span class="date">16 сентября2021</span>
+<section class="film">
+       <div class="film-text">
+                    <span class="film-date">16 сентября2021</span>
 <img src="img/venom2.svg" alt="Venom" class="film-logo">
-                    <p class="hero-description">В настырном журналисте по-прежнему живет симбиот. 
+                    <p class="film-description">В настырном журналисте по-прежнему живет симбиот. 
 Том Харди в образе обаятельного суперзлодея 
 из комиксов Marvel.</p>
        </div>
          <div class="button-group">
-            <button class="button button-primary">
+            <a data-fancybox href="www.youtube.com/watch?v=Othd8W8o3t0"  class="button button-primary">
                   <img src="img/play.svg" width="15" height="15" alt="icon:play" class="button-icon">
                 <span class="button-text">cмотреть трейлер</span>
 
-            </button>
-            <a href="ticket.html" class="button button-link">
+            </a>
+            <a data-fancybox data-src="#hidden-content" href="javascript:;" class="button button-link">
                 <img src="img/ticket.svg" width="15" height="15" alt="icon:ticket" class="button-icon">
                 <span class="button-text">билеты на премьеру</span>
             </a>
@@ -53,5 +65,14 @@
     </section>
 </div>
 <img src="img/venom.png" alt="venom" class="venom">
+<div style="display: none;" id="hidden-content">
+        <input type="email"  id="email" placeholder="Введите Ваш е-мейл, чтобы заказать билеты на премьеру">
+        <button type="submit">заказать билеты</button>
+    </div>
+<script
+   src="https://code.jquery.com/jquery-3.6.0.min.js"
+   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+   crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </body>
 </html>
